@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A styled personal portfolio website with responsive layout and contact form.">
+  <title>Kishore | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Go to top of page">
+        <span class="brand-mark">K</span>
+        <span>
+          <strong>Kishore</strong>
+          <small>Creative Web Developer</small>
+        </span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="hero" aria-label="Introduction">
+      <div class="hero-copy card">
+        <span class="eyebrow">Personal Portfolio</span>
+        <h1>Hi, I’m Kishore, and I build thoughtful websites.</h1>
+        <p>
+          I create clean, user-friendly web experiences with a focus on accessibility,
+          responsive layouts, and modern front-end design.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="#contact">Contact Me</a>
+          <a class="button secondary" href="#skills">View Skills</a>
+        </div>
+      </div>
+
+      <aside class="profile-card card" aria-label="Profile image and links">
+        <img src="images/profile.svg" alt="Illustrated profile portrait of Kishore">
+        <h2>About This Site</h2>
+        <p>
+          This portfolio includes a short introduction, key skills, and a contact form so
+          visitors can reach out directly.
+        </p>
+        <div class="external-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container content-section" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <div class="section-panel card">
+        <p>
+          I am a web development beginner who enjoys turning ideas into practical, polished
+          pages. I like layouts that are easy to read, easy to navigate, and welcoming on
+          both desktop and mobile.
+        </p>
+        <p>
+          My goal is to keep learning modern HTML, CSS, and JavaScript while building small
+          projects that show clear structure and thoughtful presentation.
+        </p>
+      </div>
+    </section>
+
+    <section class="container content-section" id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 semantic structure</li>
+        <li>Responsive CSS layouts</li>
+        <li>Accessibility basics</li>
+        <li>Form design and validation</li>
+        <li>Git and GitHub workflows</li>
+        <li>Problem solving and learning fast</li>
+      </ul>
+    </section>
+
+    <section class="container content-section" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="section-panel card">
+          <p>
+            Use the form to send a message or reach me through my external profiles.
+          </p>
+          <p>
+            Email: <a href="mailto:alex.morgan@example.com">alex.morgan@example.com</a>
+          </p>
+          <p>
+            Location: Open to remote opportunities
+          </p>
+        </div>
+
+        <div class="contact-card card">
+          <form action="mailto:alex.morgan@example.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required minlength="2" placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required minlength="3" placeholder="Project inquiry">
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required minlength="10" placeholder="Write your message here"></textarea>
+            </div>
+            <button class="button primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Kishore. Built with semantic HTML and responsive CSS.</p>
+    </div>
+  </footer>
+</body>
+</html>
