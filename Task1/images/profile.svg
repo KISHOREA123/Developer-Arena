@@ -1,0 +1,21 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated profile portrait</title>
+  <desc id="desc">A friendly illustrated portrait used as a placeholder profile image for a portfolio website.</desc>
+  <rect width="800" height="800" rx="48" fill="#EAF2F0"/>
+  <circle cx="400" cy="318" r="148" fill="#F3C7A7"/>
+  <path d="M266 330C266 256 326 196 400 196C474 196 534 256 534 330V370H266V330Z" fill="#2D3748"/>
+  <path d="M301 600C314 508 349 454 400 454C451 454 486 508 499 600" fill="#2D3748"/>
+  <path d="M295 346C295 278 342 240 400 240C458 240 505 278 505 346V388C505 430 471 464 429 464H371C329 464 295 430 295 388V346Z" fill="#F3C7A7"/>
+  <ellipse cx="350" cy="330" rx="18" ry="22" fill="#1F2937"/>
+  <ellipse cx="450" cy="330" rx="18" ry="22" fill="#1F2937"/>
+  <path d="M360 382C377 397 423 397 440 382" stroke="#B86D55" stroke-width="10" stroke-linecap="round"/>
+  <path d="M220 634C246 542 315 490 400 490C485 490 554 542 580 634" fill="#115E59"/>
+  <circle cx="206" cy="646" r="36" fill="#0F766E"/>
+  <circle cx="594" cy="646" r="36" fill="#0F766E"/>
+  <path d="M240 636H560" stroke="#0B4D49" stroke-width="18" stroke-linecap="round"/>
+  <path d="M240 650H560" stroke="#DDEAE7" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <path d="M90 120H710" stroke="#BFD7D2" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
+  <path d="M120 690H680" stroke="#BFD7D2" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="620" cy="170" r="34" fill="#0F766E" opacity="0.18"/>
+  <circle cx="160" cy="188" r="24" fill="#115E59" opacity="0.16"/>
+</svg>
