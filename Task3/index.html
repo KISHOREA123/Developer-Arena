@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive portfolio website with JavaScript features, validation, and local storage.">
+  <title>Kishore | Interactive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#hero" aria-label="Go to top of page">
+          <span class="brand-mark">K</span>
+          <span>
+            <strong>Kishore</strong>
+            <small>Interactive Web Developer</small>
+          </span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#tasks">Tasks</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">☀</span>
+          <span data-theme-label>Light mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container" id="hero" aria-label="Introduction">
+        <div class="hero-copy card reveal">
+          <span class="eyebrow">Week 3 JavaScript Project</span>
+          <h1>Hi, I’m Kishore, and I build websites that respond to users.</h1>
+          <p>
+            This portfolio adds JavaScript-driven interaction with live validation,
+            reusable functions, local storage, and dynamic content updates.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="#contact">Contact Me</a>
+            <a class="button secondary" href="#gallery">Explore Gallery</a>
+          </div>
+          <div class="hero-metrics" aria-label="Project highlights">
+            <article>
+              <strong>4+</strong>
+              <span>interactive features</span>
+            </article>
+            <article>
+              <strong>1</strong>
+              <span>external script file</span>
+            </article>
+            <article>
+              <strong>100%</strong>
+              <span>responsive layout</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="profile-card card reveal" aria-label="Profile image and links">
+          <img src="images/profile.svg" alt="Illustrated profile portrait of Kishore">
+          <h2>About This Site</h2>
+          <p>
+            The layout stays close to the earlier portfolio tasks, but now the content can
+            change based on user actions and saved preferences.
+          </p>
+          <button class="text-button" type="button" data-bio-toggle>Show more about me</button>
+          <p class="hidden-bio" data-bio hidden>
+            I focus on clean structure, readable interfaces, and small interactions that
+            make a static page feel alive without adding unnecessary complexity.
+          </p>
+          <div class="external-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="container content-section" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About Me</h2>
+        <div class="section-panel card reveal">
+          <p>
+            I am a web development learner who enjoys turning ideas into practical, polished
+            pages. I like layouts that are easy to read, easy to navigate, and welcoming on
+            both desktop and mobile.
+          </p>
+          <p>
+            My Week 3 focus is JavaScript: selecting elements, handling events, validating
+            forms, saving preferences, and updating the UI from reusable functions.
+          </p>
+        </div>
+      </section>
+
+      <section class="container content-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="gallery-title">Interactive Gallery</h2>
+            <p>Use the controls to switch between featured project visuals.</p>
+          </div>
+          <div class="slider-controls" aria-label="Slider controls">
+            <button class="icon-button" type="button" data-prev-slide aria-label="Previous slide">←</button>
+            <button class="icon-button" type="button" data-next-slide aria-label="Next slide">→</button>
+          </div>
+        </div>
+
+        <div class="slider card reveal" data-slider>
+          <div class="slider-track" data-slider-track>
+            <figure class="slide is-active" data-slide>
+              <img src="images/slide-1.svg" alt="Abstract portfolio preview with teal shapes">
+              <figcaption>
+                <strong>Hero concept</strong>
+                <span>Clean introduction with a strong call to action.</span>
+              </figcaption>
+            </figure>
+            <figure class="slide" data-slide>
+              <img src="images/slide-2.svg" alt="Task board preview with warm accents">
+              <figcaption>
+                <strong>Task board</strong>
+                <span>Reusable components for a focused to-do list section.</span>
+              </figcaption>
+            </figure>
+            <figure class="slide" data-slide>
+              <img src="images/slide-3.svg" alt="Contact form preview with dark interface">
+              <figcaption>
+                <strong>Contact form</strong>
+                <span>Validation and feedback that reacts in real time.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="container content-section" id="tasks" aria-labelledby="tasks-title">
+        <h2 id="tasks-title">Live To-Do List</h2>
+        <div class="tasks-grid">
+          <div class="card panel reveal">
+            <p>
+              Type a task and press add. You can remove items individually, and the list updates
+              instantly with DOM manipulation.
+            </p>
+            <form class="todo-form" data-todo-form>
+              <label class="sr-only" for="todo-input">New task</label>
+              <input id="todo-input" type="text" name="task" placeholder="Add a project task" autocomplete="off">
+              <button class="button primary" type="submit">Add Task</button>
+            </form>
+          </div>
+
+          <div class="card panel reveal">
+            <ul class="todo-list" data-todo-list aria-live="polite" aria-label="Task list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="container content-section" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <ul class="skills-list reveal">
+          <li>HTML5 semantic structure</li>
+          <li>Responsive CSS layouts</li>
+          <li>JavaScript DOM manipulation</li>
+          <li>Form validation and feedback</li>
+          <li>Local storage preferences</li>
+          <li>Git and GitHub workflows</li>
+        </ul>
+      </section>
+
+      <section class="container content-section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="section-panel card reveal">
+            <p>
+              Use the form to send a message or reach me through my external profiles.
+            </p>
+            <p>
+              Email: <a href="mailto:alex.morgan@example.com">alex.morgan@example.com</a>
+            </p>
+            <p>
+              Location: Open to remote opportunities
+            </p>
+            <div class="status-message" data-form-status role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="contact-card card reveal">
+            <form id="contact-form" novalidate>
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
+                <small class="field-error" data-error-for="name"></small>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+                <small class="field-error" data-error-for="email"></small>
+              </div>
+              <div class="field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+                <small class="field-error" data-error-for="subject"></small>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+                <small class="field-error" data-error-for="message"></small>
+              </div>
+              <button class="button primary" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Kishore. Built with semantic HTML, responsive CSS, and JavaScript.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,27 +1,22 @@
 # Personal Portfolio Website
 
-A simple personal portfolio website built with semantic HTML and CSS.
+## Description
 
-## Features
+This project is a simple personal portfolio website built with semantic HTML and basic CSS. It includes a header, navigation menu, About section, Skills section, Contact section, and a working contact form. The page also includes a profile image, internal navigation links, and external links for a complete single-page portfolio experience.
 
-- HTML5 structure with `header`, `nav`, `main`, and `footer`
-- Sections for About, Skills, and Contact
-- Internal navigation links for quick page movement
-- Contact form with validation attributes
-- Profile image with descriptive alt text
-- External links to GitHub and LinkedIn
+## Setup Instructions
 
-## Files
+1. Open the project folder in VS Code or any code editor.
+2. Open `index.html` in a browser to view the portfolio.
+3. Update the name, bio, skills, contact details, and links with your own information.
+4. Replace `images/profile.svg` with your own image if needed.
+5. Save the changes and refresh the browser to see updates.
 
-- `index.html`
-- `images/profile.svg`
+## Project Files
 
-## How to Use
-
-1. Open `index.html` in your browser.
-2. Update the name, bio, skills, contact email, and links with your own information.
-3. Replace the sample profile image if you want a different look.
+- `index.html` - main portfolio page
+- `images/profile.svg` - profile image used on the page
 
 ## Notes
 
-The contact form uses a `mailto:` action so it can open a mail client from a static site. If you want a server-backed form later, you can connect it to a form service or backend endpoint.
+The contact form uses a `mailto:` action, so it can open the user’s email client from a static page. If you want a live backend form later, you can connect it to a form service or server endpoint.
