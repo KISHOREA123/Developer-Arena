@@ -1,0 +1,13 @@
+/* Animations and transitions */
+.project-card{animation:fadeInUp .45s ease both}
+
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+/* subtle focus styles */
+.nav__item:focus,.btn:focus,.project-card:focus{outline:3px solid rgba(67,97,238,0.18);outline-offset:3px}
+
+.project-card__media img{transition:transform .35s ease}
+.project-card:hover .project-card__media img{transform:scale(1.03)}

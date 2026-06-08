@@ -1,0 +1,44 @@
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #4361ee;
+  --accent: #f72585;
+  --gap: 1rem;
+  --container: 1100px;
+}
+
+/* Dark theme overrides applied when .dark-theme on body */
+.dark-theme{
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --primary: #7aa2ff;
+  --accent: #ff6bcb;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg);line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+.header{background:transparent;padding:.75rem 0}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:var(--gap)}
+.brand{font-weight:700;color:var(--text);text-decoration:none}
+.nav__item{margin-left:1rem;color:var(--muted);text-decoration:none}
+.btn{padding:.5rem .75rem;border-radius:8px;border:1px solid transparent;background:var(--primary);color:#fff}
+.btn--ghost{background:transparent;border:1px solid rgba(0,0,0,.08);color:var(--text)}
+
+.hero{padding:2rem 0;text-align:center}
+.hero__title{margin:0;font-size:1.6rem}
+.hero__lead{color:var(--muted);margin-top:.5rem}
+
+.section__title{font-size:1.25rem;margin-bottom:.5rem}
+
+.site-footer{padding:2rem 0;text-align:center;color:var(--muted)}
+
+/* utilities following BEM-like naming */
+.u-hidden{position:absolute;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}
+
+/* Year injection */
+#year{font-weight:600}

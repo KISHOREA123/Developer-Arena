@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Advanced Portfolio — CSS Grid Showcase</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header class="header header--site">
+    <div class="container header__inner">
+      <a class="brand header__brand" href="#">My Portfolio</a>
+      <nav class="nav header__nav">
+        <a class="nav__item" href="#projects">Projects</a>
+        <a class="nav__item" href="#about">About</a>
+        <a class="nav__item" href="#contact">Contact</a>
+      </nav>
+      <button id="themeToggle" class="btn btn--ghost header__theme" aria-pressed="false">Switch theme</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero container">
+      <h1 class="hero__title">Advanced CSS Grid Portfolio</h1>
+      <p class="hero__lead">Demonstration of CSS Grid, Flexbox, CSS variables, animations, and BEM methodology.</p>
+    </section>
+
+    <section id="projects" class="container portfolio">
+      <h2 class="section__title">Selected Projects</h2>
+      <div class="portfolio-grid">
+        <article class="project-card">
+          <div class="project-card__media"> <img alt="Project 1" src="images/placeholder-1.svg"> </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Project One</h3>
+            <p class="project-card__desc">A responsive e-commerce landing built with performance-first techniques.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card__media"> <img alt="Project 2" src="images/placeholder-2.svg"> </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Project Two</h3>
+            <p class="project-card__desc">Interactive dashboard demonstrating complex Grid and Flex combinations.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card__media"> <img alt="Project 3" src="images/placeholder-3.svg"> </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Project Three</h3>
+            <p class="project-card__desc">Accessible content site with theming and animation polish.</p>
+          </div>
+        </article>
+        <article class="project-card project-card--large">
+          <div class="project-card__media"> <img alt="Project 4" src="images/placeholder-4.svg"> </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Featured Case Study</h3>
+            <p class="project-card__desc">In-depth case study using CSS Grid areas to create a magazine-style layout.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2 class="section__title">About</h2>
+      <p>I use modern layout systems and CSS methodologies to craft maintainable, responsive interfaces.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2 class="section__title">Contact</h2>
+      <p>Reach out via the contact form on Task4 or email me at example@example.com.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> — Advanced CSS Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="js/theme-switcher.js"></script>
+</body>
+</html>
