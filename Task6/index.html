@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>Weather Pulse Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#main">Weather Pulse</a>
+      <div class="topbar__actions">
+        <button class="chip" id="unitToggle" type="button" aria-pressed="false">Units: Metric</button>
+        <button class="chip chip--ghost" id="locationButton" type="button">Use my location</button>
+      </div>
+    </header>
+
+    <main id="main" class="app-shell">
+      <section class="hero panel">
+        <div class="hero__copy">
+          <p class="eyebrow">Week 6 Project</p>
+          <h1>Weather dashboard with live data, local preferences, and forecast clarity.</h1>
+          <p class="hero__text">Search any city, save your preferred location, switch units, and keep your settings in Local Storage.</p>
+        </div>
+
+        <form id="searchForm" class="search-bar" autocomplete="off" novalidate>
+          <label class="sr-only" for="cityInput">Search for a city</label>
+          <input id="cityInput" name="city" type="search" placeholder="Search a city, e.g. Nairobi or London" required>
+          <button class="search-bar__button" type="submit">Search</button>
+        </form>
+
+        <p class="search-hint">Tip: press Enter to search, or use your location for a quick read.</p>
+      </section>
+
+      <section class="grid-layout" aria-label="Weather overview">
+        <article class="panel current-weather" id="currentWeatherCard" aria-live="polite">
+          <div class="panel__heading">
+            <div>
+              <p class="eyebrow">Current weather</p>
+              <h2 id="locationTitle">Loading location...</h2>
+            </div>
+            <button class="favorite-toggle" id="favoriteButton" type="button" aria-pressed="false">Save city</button>
+          </div>
+
+          <div class="current-weather__body">
+            <div class="weather-mark" id="weatherMark" aria-hidden="true"></div>
+            <div>
+              <p class="temperature" id="temperatureValue">--°</p>
+              <p class="weather-summary" id="weatherSummary">Fetching the latest weather reading.</p>
+            </div>
+          </div>
+
+          <dl class="stats-grid">
+            <div class="stat-card">
+              <dt>Feels like</dt>
+              <dd id="feelsLikeValue">--</dd>
+            </div>
+            <div class="stat-card">
+              <dt>Humidity</dt>
+              <dd id="humidityValue">--%</dd>
+            </div>
+            <div class="stat-card">
+              <dt>Wind</dt>
+              <dd id="windValue">--</dd>
+            </div>
+            <div class="stat-card">
+              <dt>Visibility</dt>
+              <dd id="visibilityValue">--</dd>
+            </div>
+          </dl>
+        </article>
+
+        <aside class="panel side-panel">
+          <div class="panel__heading">
+            <div>
+              <p class="eyebrow">Saved cities</p>
+              <h2>Preferences</h2>
+            </div>
+          </div>
+          <p class="side-panel__copy">Your selected city, saved cities, and preferred units are stored locally in this browser.</p>
+          <div id="favoritesList" class="favorites-list" aria-label="Saved cities"></div>
+        </aside>
+      </section>
+
+      <section class="panel forecast-panel">
+        <div class="panel__heading">
+          <div>
+            <p class="eyebrow">5-day outlook</p>
+            <h2>Forecast</h2>
+          </div>
+        </div>
+        <div id="forecastGrid" class="forecast-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel insights-panel">
+        <div>
+          <p class="eyebrow">Status</p>
+          <h2>Live updates</h2>
+        </div>
+        <p id="statusMessage" class="status-message">Ready to search.</p>
+      </section>
+    </main>
+  </div>
+
+  <div id="loadingOverlay" class="loading-overlay" hidden>
+    <div class="loading-card" role="status" aria-live="polite">
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <p>Loading weather data...</p>
+    </div>
+  </div>
+
+  <div id="liveRegion" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
